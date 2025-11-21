@@ -1,4 +1,4 @@
 package example.circuitbreaker.exceptions;
 
-public class CircuitBreakerOpenException {
+public class CircuitBreakerOpenException extends CircuitBreakerException {
 }

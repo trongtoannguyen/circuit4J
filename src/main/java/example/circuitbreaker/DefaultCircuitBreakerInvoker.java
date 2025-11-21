@@ -1,35 +1,43 @@
 package example.circuitbreaker;
 
+import example.circuitbreaker.exceptions.CircuitBreakerException;
+import example.circuitbreaker.exceptions.CircuitBreakerTimeoutException;
 import example.circuitbreaker.states.CircuitBreakerState;
 
 import java.time.Duration;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.function.Supplier;
 
 public class DefaultCircuitBreakerInvoker implements CircuitBreakerInvoker {
 
-    private final ScheduledExecutorService scheduler;
-    private ScheduledFuture<?> timerHandle;
+    private final ScheduledExecutorService scheduledExecutor;
+    private volatile ScheduledFuture<?> timerHandle;
 
     public DefaultCircuitBreakerInvoker() {
-        this.scheduler = Executors.newScheduledThreadPool(1);
+        this.scheduledExecutor = Executors.newScheduledThreadPool(1, r -> {
+            Thread thread = new Thread(r);
+            thread.setDaemon(true);
+            return thread;
+        });
     }
 
-    public DefaultCircuitBreakerInvoker(ScheduledExecutorService scheduler) {
-        this.scheduler = Objects.requireNonNull(scheduler);
+    public DefaultCircuitBreakerInvoker(ScheduledExecutorService scheduledExecutor) {
+        this.scheduledExecutor = Objects.requireNonNull(scheduledExecutor);
     }
-
 
     @Override
     public void invokeScheduled(Runnable action, Duration interval) {
         Objects.requireNonNull(action);
         cancelTimerIfNeeded(); // Cancel any existing timer
-        timerHandle = scheduler.schedule(action, interval.toMillis(), TimeUnit.MILLISECONDS);
+        timerHandle = scheduledExecutor.schedule(action, interval.toMillis(), TimeUnit.MILLISECONDS);
     }
 
     @Override
@@ -46,8 +54,12 @@ public class DefaultCircuitBreakerInvoker implements CircuitBreakerInvoker {
         state.invocationSucceeds();
     }
 
+    // Delegate to the Supplier-based invoke method
     private void invoke(Runnable action, Duration timeout) {
-        throw new UnsupportedOperationException();
+        invoke(() -> {
+            action.run();
+            return null;
+        }, timeout);
     }
 
     @Override
@@ -67,12 +79,26 @@ public class DefaultCircuitBreakerInvoker implements CircuitBreakerInvoker {
     }
 
     private <T> T invoke(Supplier<T> func, Duration timeout) {
-        throw new UnsupportedOperationException();
+        Objects.requireNonNull(func);
+        Future<T> tFuture = scheduledExecutor.submit(func::get);
+        try {
+            return tFuture.get(timeout.toMillis(), TimeUnit.MILLISECONDS);
+        } catch (TimeoutException e) {
+            throw new CircuitBreakerTimeoutException("Invocation time out", e.getCause());
+        } catch (ExecutionException e) {
+            throw new CircuitBreakerException("Invocation failed", e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new CircuitBreakerException("Invocation interrupted", e);
+        } finally {
+            tFuture.cancel(true);
+        }
     }
 
 
     @Override
-    public <T> CompletableFuture<T> invokeThroughAsync(CircuitBreakerState state, Supplier<CompletableFuture<T>> func, Duration timeout) {
+    public <T> CompletableFuture<T> invokeThroughAsync(CircuitBreakerState state, Supplier<CompletableFuture<T>> func,
+                                                       Duration timeout) {
         Objects.requireNonNull(state);
         Objects.requireNonNull(func);
         CompletableFuture<T> future;
@@ -93,12 +119,37 @@ public class DefaultCircuitBreakerInvoker implements CircuitBreakerInvoker {
     }
 
     private <T> CompletableFuture<T> invokeAsync(Supplier<CompletableFuture<T>> func, Duration timeout) {
-        throw new UnsupportedOperationException();
+        Objects.requireNonNull(func);
+        CompletableFuture<T> future = func.get();
+
+        // apply timeout
+        return timeOutAfter(future, timeout);
+    }
+
+    private <T> CompletableFuture<T> timeOutAfter(CompletableFuture<T> future, Duration timeout) {
+        Objects.requireNonNull(future);
+
+        //treat as "no timeout"
+        if (timeout.isZero() || timeout.isNegative()) {
+            return future;
+        }
+
+        CompletableFuture<T> timeoutFuture = new CompletableFuture<>();
+        ScheduledFuture<Boolean> timeoutHandle = scheduledExecutor.schedule(
+                () -> timeoutFuture.completeExceptionally(new CircuitBreakerTimeoutException("Invocation time out")),
+                timeout.toMillis(),
+                TimeUnit.MILLISECONDS
+        );
+
+        // cancel timeout task when the future completes first
+        future.whenComplete((t, throwable) -> timeoutHandle.cancel(false));
+
+        return future.applyToEither(timeoutFuture, t -> t); // when either completes, return its result
     }
 
     //helper method to cancel any existing timer
     private void cancelTimerIfNeeded() {
-        if (timerHandle != null) {
+        if (timerHandle != null && !timerHandle.isDone()) {
             timerHandle.cancel(true);
         }
     }
