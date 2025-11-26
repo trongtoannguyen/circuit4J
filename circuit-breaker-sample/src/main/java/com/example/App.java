@@ -90,10 +90,8 @@ public class App {
             System.out.println("CircuitBreakerTimeoutException");
         } catch (CircuitBreakerOpenException e) {
             System.out.println("CircuitBreakerOpenException");
-        } catch (CircuitBreakerExecutionException e) {
-            System.out.println("CircuitBreakerExecutionException");
-        } catch (CircuitBreakerException e) {
-            System.out.println("Other CircuitBreakerException");
+        } catch (Exception e) {
+            System.out.println("Exception");
         }
     }
 }
