@@ -25,9 +25,20 @@ public class App {
     }
 
     public static void main(String[] args) {
-        ScheduledExecutorService myExecutor = Executors.newScheduledThreadPool(1);
-        App app = new App(myExecutor);
-        app.demo();
+        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+        App app = new App(executor);
+        try {
+            app.demo();
+        } finally {
+            // shutdown non-demon executor to exit the program
+            shutdownExecutor(executor);
+        }
+    }
+
+    private static void shutdownExecutor(ScheduledExecutorService executor) {
+        System.out.println("Shutting down executor...");
+        executor.shutdown();
+        System.out.println("Executor shut down.");
     }
 
     private void demo() {
@@ -44,6 +55,7 @@ public class App {
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 throw new CircuitBreakerInterruptedException();
             }
         });
@@ -64,7 +76,7 @@ public class App {
                 Thread.currentThread().interrupt();
                 throw new CircuitBreakerInterruptedException();
             }
-        });
+        }, scheduledExecutorService);
     }
 
     private CompletableFuture<Void> tryExecuteAsync(CircuitBreaker breaker, Supplier<CompletableFuture<Void>> supplier) {
