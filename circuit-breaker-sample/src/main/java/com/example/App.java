@@ -26,8 +26,8 @@ public class App {
 
     public static void main(String[] args) {
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-        App app = new App(executor);
         try {
+            App app = new App(executor);
             app.demo();
         } finally {
             // shutdown non-demon executor to exit the program
