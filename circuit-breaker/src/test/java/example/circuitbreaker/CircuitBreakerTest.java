@@ -9,7 +9,9 @@ import org.junit.jupiter.api.Test;
 import java.time.Duration;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.function.Supplier;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CircuitBreakerTest {
@@ -75,6 +77,59 @@ public class CircuitBreakerTest {
             }
 
             assertDoesNotThrow(() -> sut.execute(anyAction));
+        }
+    }
+
+    @Nested
+    class ExecuteFunctionTest {
+        //@formatter:off
+        private final Supplier<?> anyFunc = Object::new;
+        private final Supplier<?> timeoutFunc = () -> {
+            try {
+                Thread.sleep(INVOKE_TIMEOUT.toMillis() + 100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            return new Object();
+        };
+        private final Supplier<?> throwFunc = () -> {throw new RuntimeException();};
+        //@formatter:on
+
+        @Test
+        void successfulExecution() {
+            for (int i = 0; i < 100; i++) {
+                sut.execute(anyFunc);
+            }
+        }
+
+        @Test
+        void timeouts() {
+            for (int i = 0; i < MAX_FAILURES; i++) {
+                assertThrows(CircuitBreakerTimeoutException.class, () -> sut.execute(timeoutFunc));
+            }
+            assertThrows(CircuitBreakerOpenException.class, () -> sut.execute(anyFunc));
+        }
+
+        @Test
+        void failures() {
+            for (int i = 0; i < MAX_FAILURES; i++) {
+                assertThrows(Exception.class, () -> sut.execute(throwFunc));
+            }
+            assertThrows(CircuitBreakerOpenException.class, () -> sut.execute(anyFunc));
+        }
+
+        @Test
+        void resetAfterTimeout() {
+            for (int i = 0; i < MAX_FAILURES; i++) {
+                assertThrows(Exception.class, () -> sut.execute(throwFunc));
+            }
+
+            try {
+                Thread.sleep(RESET_TIMEOUT.toMillis() + 100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            assertDoesNotThrow(() -> sut.execute(anyFunc));
         }
     }
 
