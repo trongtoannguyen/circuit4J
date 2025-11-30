@@ -74,7 +74,7 @@ public class CircuitBreakerTest {
                 throw new RuntimeException(e);
             }
 
-            sut.execute(anyAction);
+            assertDoesNotThrow(() -> sut.execute(anyAction));
         }
     }
 
