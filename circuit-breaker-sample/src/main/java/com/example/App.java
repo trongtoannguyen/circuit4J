@@ -106,8 +106,11 @@ public class App {
         CompletableFuture<Void> future = tryExecuteAsync(circuitBreaker, externalService::getAsync)
                 .whenCompleteAsync((unused, throwable) -> tryExecuteAsync(circuitBreaker, () -> delayAsync(100)), scheduledExecutorService)
                 .whenCompleteAsync((unused, throwable) -> tryExecuteAsync(circuitBreaker, externalService::getAsync), scheduledExecutorService);
-
-        future.join();
+        try {
+            future.join();
+        } catch (Exception e) {
+            // handle exception if needed
+        }
     }
 
     private CompletableFuture<Void> delayAsync(long delayMillis) {
