@@ -90,6 +90,8 @@ public class DefaultCircuitBreakerInvoker implements CircuitBreakerInvoker {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new CircuitBreakerInterruptedException("Invocation interrupted", e);
+        } catch (Exception e) {
+            throw new RuntimeException();
         } finally {
             // todo: review method boolean param
             tFuture.cancel(true);

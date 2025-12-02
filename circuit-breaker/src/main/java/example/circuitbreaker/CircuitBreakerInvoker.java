@@ -18,7 +18,7 @@ public interface CircuitBreakerInvoker {
      * or canceled by the caller.
      *
      * @param action   the task to be executed periodically. Must not be null.
-     * @param interval the time interval between successive executions of the action. Must not be null.
+     * @param interval the time interval between successive executions of the action. Must not be null, and the interval with zero or negative is treated as "run immediately".
      */
     void invokeScheduled(Runnable action, Duration interval);
 
