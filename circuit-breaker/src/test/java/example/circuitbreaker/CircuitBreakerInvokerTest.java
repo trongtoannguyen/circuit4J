@@ -9,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.Duration;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -17,6 +18,7 @@ import java.util.function.Supplier;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.never;
@@ -93,7 +95,58 @@ class CircuitBreakerInvokerTest {
             @Test
             void supplierSuccessfulInvocation() {
                 Supplier<?> supplier = Object::new;
-                assertDoesNotThrow(() -> sut.invokeThrough(state, supplier, Duration.ofMillis(100)));
+                assertNotNull(
+                        assertDoesNotThrow(() -> sut.invokeThrough(state, supplier, Duration.ofMillis(100))));
+                verify(state).invocationSucceeds();
+                verify(state, never()).invocationFails();
+            }
+        }
+
+        @Nested
+        class InvokeThroughAsyncTest {
+
+            @Mock
+            private CircuitBreakerState state;
+
+            @Test
+            void actionFailureInvocation() {
+                Supplier<CompletableFuture<Void>> func = () -> {
+                    throw new RuntimeException();
+                };
+                assertThrows(Exception.class, () -> sut.invokeThroughAsync(state, func, Duration.ofMillis(100)));
+                verify(state).invocationFails();
+                verify(state, never()).invocationSucceeds();
+            }
+
+            @Test
+            void actionSuccessfulInvocation() {
+                Supplier<CompletableFuture<Void>> func = () ->
+                        CompletableFuture.completedFuture(null);
+                assertDoesNotThrow(() -> {
+                    sut.invokeThroughAsync(state, func, Duration.ofMillis(100)).get(100, TimeUnit.MILLISECONDS);
+                });
+                verify(state).invocationSucceeds();
+                verify(state, never()).invocationFails();
+            }
+
+            @Test
+            void supplierFailureInvocation() {
+                Supplier<CompletableFuture<Object>> supplier = () -> {
+                    throw new RuntimeException();
+                };
+                assertNotNull(
+                        assertThrows(Exception.class, () -> sut.invokeThroughAsync(state, supplier, Duration.ofMillis(100))));
+                verify(state).invocationFails();
+                verify(state, never()).invocationSucceeds();
+            }
+
+            @Test
+            void supplierSuccessfulInvocation() {
+                Object expectedResult = new Object();
+                Supplier<CompletableFuture<Object>> supplier = () -> CompletableFuture.completedFuture(expectedResult);
+                Object result = assertDoesNotThrow(() -> sut.invokeThroughAsync(state, supplier, Duration.ofMillis(100))
+                        .get(100, TimeUnit.MILLISECONDS));
+                assertEquals(expectedResult, result);
                 verify(state).invocationSucceeds();
                 verify(state, never()).invocationFails();
             }
