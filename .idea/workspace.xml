@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="873b53cf-3a0c-4d4f-916a-b8148ce913d4" name="Changes" comment="chore: Remove unnecessary Maven compiler plugin configuration from pom.xml">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/circuit-breaker-sample/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/src/main/java/com/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/circuit-breaker-sample/src/main/java/com/example/App.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="toannt52 &lt;toannt52@fpt.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="jj" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="HalfOpenCircuitBreakerStateTest" />
+      <run-configuration type="JUnit" name="ClosedCircuitBreakerStateTest.invocationSucceeds" />
+    </enabled-run-configurations>
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="GVuzZQRc" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="35mqKftQf1AJu5pK3rynA83GNQu" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteActionTest.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteActionTest.successfulExecution.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteActionTest.timeouts.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.executor": "Debug",
+    "JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.successfulExecution.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.timeouts.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteFunctionTest.executor": "Run",
+    "JUnit.CircuitBreakerTest.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest$ResetBehavior.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.enter.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.invocationSucceeds.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.invoke.executor": "Run",
+    "JUnit.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest.executor": "Run",
+    "JUnit.HalfOpenCircuitBreakerStateTest.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.circuit-breaker [test].executor": "Run",
+    "Maven.circuit-breaker-java [clean].executor": "Run",
+    "Maven.circuit-breaker-java [install].executor": "Run",
+    "Maven.circuit-breaker-pattern [clean].executor": "Run",
+    "Maven.circuit-breaker-pattern [test].executor": "Run",
+    "Maven.circuit-breaker-pattern [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/trong/development/system-disign/circuit-breaker-java/circuit4J/src/test/java",
+    "last_opened_file_path": "C:/Users/trong/development/system-disign/circuit-breaker-pattern",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15332031",
+    "project.structure.side.proportion": "0.3187067",
+    "settings.editor.selected.configurable": "editing.templates",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\trong\development\system-disign\circuit-breaker-java\circuit4J\src" />
+      <recent name="C:\Users\trong\development\system-disign\circuit-breaker-java\circuit4J\src\main\java\example\circuitbreaker" />
+      <recent name="C:\Users\trong\development\system-disign\circuit-breaker-java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="example.circuitbreaker.states" />
+      <recent name="example.circuitbreaker" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation">
+    <configuration name="CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit4J" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.circuitbreaker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.CircuitBreakerInvokerTest.InvokeScheduledTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest" />
+      <option name="METHOD_NAME" value="actionSuccessfulInvocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClosedCircuitBreakerStateTest$ResetBehavior" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit-breaker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.circuitbreaker.states.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.states.ClosedCircuitBreakerStateTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.ClosedCircuitBreakerStateTest$ResetBehavior" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClosedCircuitBreakerStateTest.invoke" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit-breaker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.circuitbreaker.states.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.states" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.ClosedCircuitBreakerStateTest" />
+      <option name="METHOD_NAME" value="invoke" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit-breaker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.circuitbreaker.states.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.states.HalfOpenCircuitBreakerStateTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HalfOpenCircuitBreakerStateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit-breaker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.circuitbreaker.states.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.states" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.HalfOpenCircuitBreakerStateTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation" />
+        <item itemvalue="JUnit.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest" />
+        <item itemvalue="JUnit.HalfOpenCircuitBreakerStateTest" />
+        <item itemvalue="JUnit.ClosedCircuitBreakerStateTest$ResetBehavior" />
+        <item itemvalue="JUnit.ClosedCircuitBreakerStateTest.invoke" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="873b53cf-3a0c-4d4f-916a-b8148ce913d4" name="Changes" comment="" />
+      <created>1763725532902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763725532902</updated>
+      <workItem from="1763725534326" duration="14953000" />
+      <workItem from="1764003550367" duration="19996000" />
+      <workItem from="1764170013742" duration="576000" />
+      <workItem from="1764170600639" duration="6155000" />
+      <workItem from="1764286891584" duration="28540000" />
+      <workItem from="1764552537170" duration="4085000" />
+      <workItem from="1764775000010" duration="10000" />
+      <workItem from="1764775027098" duration="17450000" />
+      <workItem from="1764951318357" duration="4568000" />
+      <workItem from="1765181203391" duration="1062000" />
+      <workItem from="1765187081968" duration="289000" />
+      <workItem from="1765187374262" duration="679000" />
+    </task>
+    <task id="LOCAL-00001" summary="Remove obsolete file encodings and update ProjectRootManager configuration">
+      <option name="closed" value="true" />
+      <created>1763725581298</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763725581298</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add external service module for testing">
+      <option name="closed" value="true" />
+      <created>1763725780808</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763725780808</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update readme">
+      <option name="closed" value="true" />
+      <created>1764003592527</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764003592527</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactor `OpenCircuitBreakerState.java` `DefaultCircuitBreaker.java` `DefaultCircuitBreakerInvoker.java' constructor, implement `OpenCircuitBreakerState`">
+      <option name="closed" value="true" />
+      <created>1764083549911</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764083549911</updated>
+    </task>
+    <task id="LOCAL-00005" summary="reduce thread pool size in main method for improved resource management">
+      <option name="closed" value="true" />
+      <created>1764087689860</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764087689860</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor completable future helper method to static util class">
+      <option name="closed" value="true" />
+      <created>1764087763169</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764087763169</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor HalfOpenCircuitBreakerState to include invoker and timeout, enhance invocation logic">
+      <option name="closed" value="true" />
+      <created>1764145630119</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764145630119</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor App.java to include executor shutdown logic and improve exception handling in demo method">
+      <option name="closed" value="true" />
+      <created>1764259834590</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764259834590</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor App.java to include executor shutdown logic and improve exception handling in demo method">
+      <option name="closed" value="true" />
+      <created>1764260039724</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764260039724</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor App.java to improve executor shutdown logic, enhance exception handling, and streamline execution methods">
+      <option name="closed" value="true" />
+      <created>1764412458314</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764412458314</updated>
+    </task>
+    <task id="LOCAL-00011" summary="try catch surround method">
+      <option name="closed" value="true" />
+      <created>1764479898499</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1764479898499</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add unit tests for CircuitBreaker to validate action tests">
+      <option name="closed" value="true" />
+      <created>1764482301071</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1764482301071</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add unit tests for CircuitBreaker to validate action tests">
+      <option name="closed" value="true" />
+      <created>1764484267985</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764484267985</updated>
+    </task>
+    <task id="LOCAL-00014" summary="JUnit test cases for supplier methods">
+      <option name="closed" value="true" />
+      <created>1764484336784</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1764484336784</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add unit tests for CircuitBreaker to validate async execution and timeout scenarios">
+      <option name="closed" value="true" />
+      <created>1764604528803</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1764604528803</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add unit tests for state class">
+      <option name="closed" value="true" />
+      <created>1764780923095</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1764780923095</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor App.java and ExternalService.java to rename methods for improved clarity and update execution logic in circuit breaker demos">
+      <option name="closed" value="true" />
+      <created>1764821288546</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764821288546</updated>
+    </task>
+    <task id="LOCAL-00018" summary="document CircuitBreakerState interface and implement abstraction for `ClosedCircuitBreakerState`">
+      <option name="closed" value="true" />
+      <created>1764821813873</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764821813873</updated>
+    </task>
+    <task id="LOCAL-00019" summary="document CircuitBreakerState interface and implement abstraction for `ClosedCircuitBreakerState`">
+      <option name="closed" value="true" />
+      <created>1764821825254</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1764821825254</updated>
+    </task>
+    <task id="LOCAL-00020" summary="document CircuitBreakerState interface and implement abstraction for `ClosedCircuitBreakerState`">
+      <option name="closed" value="true" />
+      <created>1764821871387</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1764821871387</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add CircuitBreaker interface and DefaultCircuitBreaker implementation&#10;&#10;Introduce the `CircuitBreaker` interface defining synchronous and asynchronous execution methods with circuit breaker behavior. Implement a default version, `DefaultCircuitBreaker`, that delegates execution and state transitions to the state-specific `CircuitBreakerState`.">
+      <option name="closed" value="true" />
+      <created>1764821928517</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1764821928517</updated>
+    </task>
+    <task id="LOCAL-00022" summary="init implement `CircuitBreakerInvoker` interface">
+      <option name="closed" value="true" />
+      <created>1764821953299</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1764821953299</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Refactor circuit breaker to support state transitions and events&#10;&#10;Introduced `CircuitBreakerSwitch` and `CircuitBreakerListener` interfaces for handling state transitions and event notifications. Updated `DefaultCircuitBreaker` to manage states (`Open`, `Closed`, `Half-Open`) and notify listeners on transitions. This enhances flexibility and extensibility in managing circuit breaker behaviors.">
+      <option name="closed" value="true" />
+      <created>1764821965667</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1764821965667</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Refactor circuit breaker to support state transitions and events&#10;&#10;Introduced `CircuitBreakerSwitch` and `CircuitBreakerListener` interfaces for handling state transitions and event notifications. Updated `DefaultCircuitBreaker` to manage states (`Open`, `Closed`, `Half-Open`) and notify listeners on transitions. This enhances flexibility and extensibility in managing circuit breaker behaviors.">
+      <option name="closed" value="true" />
+      <created>1764822883986</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1764822883986</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Refactor circuit breaker to support state transitions and events&#10;&#10;Introduced `CircuitBreakerSwitch` and `CircuitBreakerListener` interfaces for handling state transitions and event notifications. Updated `DefaultCircuitBreaker` to manage states (`Open`, `Closed`, `Half-Open`) and notify listeners on transitions. This enhances flexibility and extensibility in managing circuit breaker behaviors.">
+      <option name="closed" value="true" />
+      <created>1764822909901</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1764822909901</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Refactor circuit breaker to support state transitions and events&#10;&#10;Introduced `CircuitBreakerSwitch` and `CircuitBreakerListener` interfaces for handling state transitions and event notifications. Updated `DefaultCircuitBreaker` to manage states (`Open`, `Closed`, `Half-Open`) and notify listeners on transitions. This enhances flexibility and extensibility in managing circuit breaker behaviors.">
+      <option name="closed" value="true" />
+      <created>1764822974070</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1764822974070</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add unit tests for ClosedCircuitBreakerState to cover invocation failure, reset behavior, and delegation scenarios">
+      <option name="closed" value="true" />
+      <created>1764846880488</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1764846880488</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refactor CircuitBreakerInvokerTest to reuse static TIMEOUT constant in test cases">
+      <option name="closed" value="true" />
+      <created>1764846901322</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1764846901322</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add unit test case for HalfOpenCircuitBreakerState with action">
+      <option name="closed" value="true" />
+      <created>1764849195601</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1764849195601</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add async unit test cases for HalfOpenCircuitBreakerState">
+      <option name="closed" value="true" />
+      <created>1764953931852</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1764953931852</updated>
+    </task>
+    <task id="LOCAL-00031" summary="release: Prepare for v1.0.0 with updated dependencies, README improvements, and project metadata changes">
+      <option name="closed" value="true" />
+      <created>1764956471707</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1764956471707</updated>
+    </task>
+    <task id="LOCAL-00032" summary="chore: Remove unnecessary Maven compiler plugin configuration from pom.xml">
+      <option name="closed" value="true" />
+      <created>1765187203372</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1765187203372</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor `OpenCircuitBreakerState.java` `DefaultCircuitBreaker.java` `DefaultCircuitBreakerInvoker.java' constructor, implement `OpenCircuitBreakerState`" />
+    <MESSAGE value="reduce thread pool size in main method for improved resource management" />
+    <MESSAGE value="refactor completable future helper method to static util class" />
+    <MESSAGE value="refactor HalfOpenCircuitBreakerState to include invoker and timeout, enhance invocation logic" />
+    <MESSAGE value="refactor App.java to include executor shutdown logic and improve exception handling in demo method" />
+    <MESSAGE value="refactor App.java to improve executor shutdown logic, enhance exception handling, and streamline execution methods" />
+    <MESSAGE value="try catch surround method" />
+    <MESSAGE value="add unit tests for CircuitBreaker to validate action tests" />
+    <MESSAGE value="JUnit test cases for supplier methods" />
+    <MESSAGE value="add unit tests for CircuitBreaker to validate async execution and timeout scenarios" />
+    <MESSAGE value="add unit tests for state class" />
+    <MESSAGE value="Add CircuitBreaker interface and DefaultCircuitBreaker implementation&#10;&#10;Introduce the `CircuitBreaker` interface defining synchronous and asynchronous execution methods with circuit breaker behavior. Implement a default version, `DefaultCircuitBreaker`, that delegates execution and state transitions to the state-specific `CircuitBreakerState`." />
+    <MESSAGE value="init implement `CircuitBreakerInvoker` interface" />
+    <MESSAGE value="document CircuitBreakerState interface and implement abstraction for `ClosedCircuitBreakerState`" />
+    <MESSAGE value="refactor App.java and ExternalService.java to rename methods for improved clarity and update execution logic in circuit breaker demos" />
+    <MESSAGE value="refactor structure to implement multimodule maven&#10;&#10;# Conflicts:&#10;#&#9;.idea/encodings.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;circuit-breaker-sample/src/test/java/com/example/AppTest.java&#10;#&#9;circuit-breaker/pom.xml&#10;#&#9;circuit-breaker/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerExecutionException.java&#10;#&#9;circuit-breaker/src/main/java/example/circuitbreaker/states/HalfOpenCircuitBreakerState.java&#10;#&#9;circuit-breaker/src/main/java/example/circuitbreaker/states/OpenCircuitBreakerState.java&#10;#&#9;circuit-breaker/src/test/java/example/circuitbreaker/AppTest.java&#10;#&#9;pom.xml&#10;#&#9;src/test/java/example/circuitbreaker/AppTest.java" />
+    <MESSAGE value="Remove obsolete file encodings and update ProjectRootManager configuration&#10;&#10;# Conflicts:&#10;#&#9;.idea/encodings.xml&#10;#&#9;.idea/misc.xml" />
+    <MESSAGE value="update readme&#10;&#10;# Conflicts:&#10;#&#9;circuit-breaker/README.md" />
+    <MESSAGE value="Refactor circuit breaker to support state transitions and events&#10;&#10;Introduced `CircuitBreakerSwitch` and `CircuitBreakerListener` interfaces for handling state transitions and event notifications. Updated `DefaultCircuitBreaker` to manage states (`Open`, `Closed`, `Half-Open`) and notify listeners on transitions. This enhances flexibility and extensibility in managing circuit breaker behaviors." />
+    <MESSAGE value="add unit tests for ClosedCircuitBreakerState to cover invocation failure, reset behavior, and delegation scenarios" />
+    <MESSAGE value="refactor CircuitBreakerInvokerTest to reuse static TIMEOUT constant in test cases" />
+    <MESSAGE value="add unit test case for HalfOpenCircuitBreakerState with action" />
+    <MESSAGE value="add async unit test cases for HalfOpenCircuitBreakerState" />
+    <MESSAGE value="release: Prepare for v1.0.0 with updated dependencies, README improvements, and project metadata changes" />
+    <MESSAGE value="chore: Remove unnecessary Maven compiler plugin configuration from pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: Remove unnecessary Maven compiler plugin configuration from pom.xml" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

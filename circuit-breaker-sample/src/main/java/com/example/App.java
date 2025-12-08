@@ -89,8 +89,8 @@ public class App {
     }
 
     private void demo() {
-        var externalService = new ExternalService();
-        var circuitBreaker = new DefaultCircuitBreaker(
+        ExternalService externalService = new ExternalService();
+        DefaultCircuitBreaker circuitBreaker = new DefaultCircuitBreaker(
                 scheduledExecutorService,
                 2, // max 2 failures before open the circuit
                 Duration.ofMillis(10), // in 10 ms must be completed
