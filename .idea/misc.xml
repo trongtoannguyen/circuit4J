@@ -5,6 +5,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/circuit-breaker/pom.xml" />
+        <option value="$PROJECT_DIR$/circuit4J/pom.xml" />
       </list>
     </option>
   </component>
