@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="873b53cf-3a0c-4d4f-916a-b8148ce913d4" name="Changes" comment="chore: Remove unnecessary Maven compiler plugin configuration from pom.xml">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/circuit-breaker-sample/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/src/main/java/com/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/circuit-breaker-sample/src/main/java/com/example/App.java" afterDir="false" />
+    <list default="true" id="873b53cf-3a0c-4d4f-916a-b8148ce913d4" name="Changes" comment="chore: remove all circuit-breaker-related files, examples, and dependencies to clean up the project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +79,7 @@
   "keyToString": {
     "Application.App.executor": "Run",
     "JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation.executor": "Run",
+    "JUnit.CircuitBreakerListenerTest.executor": "Run",
     "JUnit.CircuitBreakerTest$ExecuteActionTest.executor": "Run",
     "JUnit.CircuitBreakerTest$ExecuteActionTest.successfulExecution.executor": "Run",
     "JUnit.CircuitBreakerTest$ExecuteActionTest.timeouts.executor": "Run",
@@ -99,9 +93,21 @@
     "JUnit.ClosedCircuitBreakerStateTest.executor": "Run",
     "JUnit.ClosedCircuitBreakerStateTest.invocationSucceeds.executor": "Run",
     "JUnit.ClosedCircuitBreakerStateTest.invoke.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.circuitRecoveryWithConcurrentAccess.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$ConcurrentMixedCalls.concurrentCallsWithFailures.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$ConcurrentSuccessfulCalls.multipleConcurrentSuccessfulAsyncCalls.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.highLoadConcurrentAsyncCalls.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$RaceConditionTests.concurrentStateTransitions.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest.executor": "Run",
     "JUnit.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest.executor": "Run",
     "JUnit.HalfOpenCircuitBreakerStateTest.executor": "Run",
+    "JUnit.circuitbreaker in circuit4J.executor": "Run",
+    "JUnit.states in circuit4J.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven. [test...].executor": "Run",
     "Maven.circuit-breaker [test].executor": "Run",
     "Maven.circuit-breaker-java [clean].executor": "Run",
     "Maven.circuit-breaker-java [install].executor": "Run",
@@ -138,6 +144,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\trong\development\system-disign\circuit-breaker-pattern\circuit4J\src\test\java\example\circuitbreaker" />
       <recent name="C:\Users\trong\development\system-disign\circuit-breaker-java\circuit4J\src" />
       <recent name="C:\Users\trong\development\system-disign\circuit-breaker-java\circuit4J\src\main\java\example\circuitbreaker" />
       <recent name="C:\Users\trong\development\system-disign\circuit-breaker-java" />
@@ -156,8 +163,8 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation">
-    <configuration name="CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling">
+    <configuration name="ConcurrentAsyncExecutionTest$CircuitRecoveryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="circuit4J" />
       <extension name="coverage">
         <pattern>
@@ -165,82 +172,83 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example.circuitbreaker.CircuitBreakerInvokerTest.InvokeScheduledTest" />
-      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest" />
-      <option name="METHOD_NAME" value="actionSuccessfulInvocation" />
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest$CircuitRecoveryTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConcurrentAsyncExecutionTest$CircuitRecoveryTests.circuitRecoveryWithConcurrentAccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit4J" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.circuitbreaker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest$CircuitRecoveryTests" />
+      <option name="METHOD_NAME" value="circuitRecoveryWithConcurrentAccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClosedCircuitBreakerStateTest$ResetBehavior" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="circuit-breaker" />
+    <configuration name="ConcurrentAsyncExecutionTest$HighLoadStressTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit4J" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.circuitbreaker.states.*" />
+          <option name="PATTERN" value="example.circuitbreaker.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example.circuitbreaker.states.ClosedCircuitBreakerStateTest" />
-      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.ClosedCircuitBreakerStateTest$ResetBehavior" />
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest$HighLoadStressTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClosedCircuitBreakerStateTest.invoke" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="circuit-breaker" />
+    <configuration name="ConcurrentAsyncExecutionTest$HighLoadStressTests.highLoadConcurrentAsyncCalls" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit4J" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.circuitbreaker.states.*" />
+          <option name="PATTERN" value="example.circuitbreaker.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example.circuitbreaker.states" />
-      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.ClosedCircuitBreakerStateTest" />
-      <option name="METHOD_NAME" value="invoke" />
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest$HighLoadStressTests" />
+      <option name="METHOD_NAME" value="highLoadConcurrentAsyncCalls" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="circuit-breaker" />
+    <configuration name="ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit4J" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="example.circuitbreaker.states.*" />
+          <option name="PATTERN" value="example.circuitbreaker.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="example.circuitbreaker.states.HalfOpenCircuitBreakerStateTest" />
-      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HalfOpenCircuitBreakerStateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="circuit-breaker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="example.circuitbreaker.states.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="example.circuitbreaker.states" />
-      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.states.HalfOpenCircuitBreakerStateTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest$TimeoutHandlingTests" />
+      <option name="METHOD_NAME" value="concurrentTimeoutHandling" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation" />
-        <item itemvalue="JUnit.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest" />
-        <item itemvalue="JUnit.HalfOpenCircuitBreakerStateTest" />
-        <item itemvalue="JUnit.ClosedCircuitBreakerStateTest$ResetBehavior" />
-        <item itemvalue="JUnit.ClosedCircuitBreakerStateTest.invoke" />
+        <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling" />
+        <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests" />
+        <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.circuitRecoveryWithConcurrentAccess" />
+        <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.highLoadConcurrentAsyncCalls" />
+        <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +278,7 @@
       <workItem from="1764951318357" duration="4568000" />
       <workItem from="1765181203391" duration="1062000" />
       <workItem from="1765187081968" duration="289000" />
-      <workItem from="1765187374262" duration="679000" />
+      <workItem from="1765187374262" duration="5674000" />
     </task>
     <task id="LOCAL-00001" summary="Remove obsolete file encodings and update ProjectRootManager configuration">
       <option name="closed" value="true" />
@@ -528,7 +536,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765187203372</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="chore(idea): Remove obsolete migration files and update workspace configuration">
+      <option name="closed" value="true" />
+      <created>1765188065703</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1765188065703</updated>
+    </task>
+    <task id="LOCAL-00034" summary="chore: remove all circuit-breaker-related files, examples, and dependencies to clean up the project">
+      <option name="closed" value="true" />
+      <created>1765188137122</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1765188137122</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,8 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor `OpenCircuitBreakerState.java` `DefaultCircuitBreaker.java` `DefaultCircuitBreakerInvoker.java' constructor, implement `OpenCircuitBreakerState`" />
-    <MESSAGE value="reduce thread pool size in main method for improved resource management" />
     <MESSAGE value="refactor completable future helper method to static util class" />
     <MESSAGE value="refactor HalfOpenCircuitBreakerState to include invoker and timeout, enhance invocation logic" />
     <MESSAGE value="refactor App.java to include executor shutdown logic and improve exception handling in demo method" />
@@ -583,11 +605,24 @@
     <MESSAGE value="add async unit test cases for HalfOpenCircuitBreakerState" />
     <MESSAGE value="release: Prepare for v1.0.0 with updated dependencies, README improvements, and project metadata changes" />
     <MESSAGE value="chore: Remove unnecessary Maven compiler plugin configuration from pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: Remove unnecessary Maven compiler plugin configuration from pom.xml" />
+    <MESSAGE value="chore(idea): Remove obsolete migration files and update workspace configuration" />
+    <MESSAGE value="chore: remove all circuit-breaker-related files, examples, and dependencies to clean up the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: remove all circuit-breaker-related files, examples, and dependencies to clean up the project" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/ConcurrentAsyncExecutionTest.java</url>
+          <line>342</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
