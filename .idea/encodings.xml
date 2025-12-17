@@ -3,9 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/circuit-breaker-sample/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/circuit-breaker-sample/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/circuit4J/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/circuit4J/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$USER_HOME$/src/main/java" charset="UTF-8" />
+    <file url="file://$USER_HOME$/src/main/resources" charset="UTF-8" />
   </component>
 </project>

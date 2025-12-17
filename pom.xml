@@ -2,13 +2,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>circuit-breaker-pattern</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
+    <groupId>io.github.trongtoannguyen</groupId>
+    <artifactId>circuit4j</artifactId>
+    <version>${revision}</version>
+    <packaging>jar</packaging>
 
-    <name>circuit-breaker-pattern</name>
-    <url>http://maven.apache.org</url>
+    <name>Circuit4J</name>
+    <description>Circuit Breaker library for Java with State Pattern</description>
+    <url>https://github.com/trongtoannguyen/circuit4j</url>
+    <inceptionYear>2025</inceptionYear>
 
     <developers>
         <developer>
@@ -17,12 +19,70 @@
         </developer>
     </developers>
 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/trongtoannguyen/circuit4j.git</connection>
+        <developerConnection>scm:git:https://github.com/trongtoannguyen/circuit4j.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/trongtoannguyen/circuit4j</url>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/trongtoannguyen/circuit4j/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/trongtoannguyen/circuit4j/actions</url>
+    </ciManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/trongtoannguyen/circuit4J</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+        <java.version>17</java.version>
+        <junit.version>6.0.1</junit.version>
+        <mockito.version>5.20.0</mockito.version>
+        <revision>1.0.0</revision>
     </properties>
 
-    <modules>
-        <module>circuit4J</module>
-        <module>circuit-breaker-sample</module>
-    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>
