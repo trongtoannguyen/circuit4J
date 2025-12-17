@@ -4,45 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="873b53cf-3a0c-4d4f-916a-b8148ce913d4" name="Changes" comment="update: Upgrade GitHub Actions to latest versions and add distribution management for GitHub Packages">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="873b53cf-3a0c-4d4f-916a-b8148ce913d4" name="Changes" comment="maven: remove dependencyManagement tag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/src/main/java/com/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/src/main/java/com/example/ExternalService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit-breaker-sample/src/test/java/com/example/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/CircuitBreaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/CircuitBreaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/CircuitBreakerInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/CircuitBreakerInvoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/CircuitBreakerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/CircuitBreakerListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/CircuitBreakerSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/CircuitBreakerSwitch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/CompletableFutureUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/CompletableFutureUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/DefaultCircuitBreaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/DefaultCircuitBreaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/DefaultCircuitBreakerInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/DefaultCircuitBreakerInvoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerExecutionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerExecutionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerInterruptedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerInterruptedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerOpenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerOpenException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerTimeoutException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/exceptions/CircuitBreakerTimeoutException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/states/CircuitBreakerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/states/CircuitBreakerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/states/ClosedCircuitBreakerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/states/ClosedCircuitBreakerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/states/HalfOpenCircuitBreakerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/states/HalfOpenCircuitBreakerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/main/java/example/circuitbreaker/states/OpenCircuitBreakerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/circuitbreaker/states/OpenCircuitBreakerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/CONCURRENT_TESTING_GUIDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/CONCURRENT_TESTING_GUIDE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/CONCURRENT_TESTING_README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/CONCURRENT_TESTING_README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/CircuitBreakerInvokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/CircuitBreakerInvokerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/CircuitBreakerListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/CircuitBreakerListenerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/CircuitBreakerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/CircuitBreakerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/ConcurrentAsyncExecutionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/ConcurrentAsyncExecutionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/states/ClosedCircuitBreakerStateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/states/ClosedCircuitBreakerStateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/states/HalfOpenCircuitBreakerStateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/states/HalfOpenCircuitBreakerStateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circuit4J/src/test/java/example/circuitbreaker/states/OpenCircuitBreakerStateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/circuitbreaker/states/OpenCircuitBreakerStateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="53" />
+    <option name="cachedIndexableFilesCount" value="48" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -122,76 +86,80 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerListenerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerTest$ExecuteActionTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerTest$ExecuteActionTest.successfulExecution.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerTest$ExecuteActionTest.timeouts.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.successfulExecution.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.timeouts.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerTest$ExecuteFunctionTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CircuitBreakerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClosedCircuitBreakerStateTest$ResetBehavior.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClosedCircuitBreakerStateTest.enter.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClosedCircuitBreakerStateTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClosedCircuitBreakerStateTest.invocationSucceeds.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClosedCircuitBreakerStateTest.invoke.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.circuitRecoveryWithConcurrentAccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$ConcurrentMixedCalls.concurrentCallsWithFailures.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$ConcurrentSuccessfulCalls.multipleConcurrentSuccessfulAsyncCalls.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.highLoadConcurrentAsyncCalls.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$RaceConditionTests.concurrentStateTransitions.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ConcurrentAsyncExecutionTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HalfOpenCircuitBreakerStateTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.circuitbreaker in circuit4J.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.states in circuit4J.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [test...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.circuit-breaker [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.circuit-breaker-java [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.circuit-breaker-java [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.circuit-breaker-pattern [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.circuit-breaker-pattern [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.circuit-breaker-pattern [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.circuit-breaker-pattern [validate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/trong/development/system-disign/circuit-breaker-java/circuit4J/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/trong/development/system-disign/circuit-breaker-pattern&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3187067&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "JUnit.CircuitBreakerInvokerTest$InvokeScheduledTest$InvokeThroughTest.actionSuccessfulInvocation.executor": "Run",
+    "JUnit.CircuitBreakerListenerTest.executor": "Run",
+    "JUnit.CircuitBreakerTest (1).executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteActionTest.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteActionTest.successfulExecution.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteActionTest.timeouts.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.executor": "Debug",
+    "JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.successfulExecution.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteAsyncActionTest.timeouts.executor": "Run",
+    "JUnit.CircuitBreakerTest$ExecuteFunctionTest.executor": "Run",
+    "JUnit.CircuitBreakerTest.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest$ResetBehavior.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.enter.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.invocationSucceeds.executor": "Run",
+    "JUnit.ClosedCircuitBreakerStateTest.invoke.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.circuitRecoveryWithConcurrentAccess.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$ConcurrentMixedCalls.concurrentCallsWithFailures.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$ConcurrentSuccessfulCalls.multipleConcurrentSuccessfulAsyncCalls.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.highLoadConcurrentAsyncCalls.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$RaceConditionTests.concurrentStateTransitions.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling.executor": "Run",
+    "JUnit.ConcurrentAsyncExecutionTest.executor": "Run",
+    "JUnit.HalfOpenCircuitBreakerStateTest$StateInvokeAsyncTest.executor": "Run",
+    "JUnit.HalfOpenCircuitBreakerStateTest.executor": "Run",
+    "JUnit.circuitbreaker in circuit4J.executor": "Run",
+    "JUnit.states in circuit4J.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven. [test...].executor": "Run",
+    "Maven.circuit-breaker [test].executor": "Run",
+    "Maven.circuit-breaker-java [clean].executor": "Run",
+    "Maven.circuit-breaker-java [install].executor": "Run",
+    "Maven.circuit-breaker-pattern [clean].executor": "Run",
+    "Maven.circuit-breaker-pattern [install].executor": "Run",
+    "Maven.circuit-breaker-pattern [test].executor": "Run",
+    "Maven.circuit-breaker-pattern [validate].executor": "Run",
+    "Maven.circuit4j [clean].executor": "Run",
+    "Maven.circuit4j [install].executor": "Run",
+    "Maven.circuit4j [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/trong/development/system-disign/circuit-breaker-java/circuit4J/src/test/java",
+    "last_opened_file_path": "C:/Users/trong/development/system-disign/circuit4j",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15332031",
+    "project.structure.side.proportion": "0.3187067",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\trong\development\system-disign\circuit-breaker-pattern" />
@@ -214,7 +182,22 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CircuitBreakerTest">
+  <component name="RunManager" selected="JUnit.CircuitBreakerTest (1)">
+    <configuration name="CircuitBreakerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="circuit4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.circuitbreaker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="example.circuitbreaker" />
+      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.CircuitBreakerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CircuitBreakerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="circuit4J" />
       <extension name="coverage">
@@ -261,22 +244,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConcurrentAsyncExecutionTest$HighLoadStressTests.highLoadConcurrentAsyncCalls" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="circuit4J" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="example.circuitbreaker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest" />
-      <option name="MAIN_CLASS_NAME" value="example.circuitbreaker.ConcurrentAsyncExecutionTest$HighLoadStressTests" />
-      <option name="METHOD_NAME" value="highLoadConcurrentAsyncCalls" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="circuit4J" />
       <extension name="coverage">
@@ -295,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CircuitBreakerTest (1)" />
         <item itemvalue="JUnit.CircuitBreakerTest" />
         <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$TimeoutHandlingTests.concurrentTimeoutHandling" />
         <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests" />
         <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$CircuitRecoveryTests.circuitRecoveryWithConcurrentAccess" />
-        <item itemvalue="JUnit.ConcurrentAsyncExecutionTest$HighLoadStressTests.highLoadConcurrentAsyncCalls" />
       </list>
     </recent_temporary>
   </component>
@@ -342,6 +309,8 @@
       <workItem from="1765966582244" duration="146000" />
       <workItem from="1765966738905" duration="3697000" />
       <workItem from="1765984158824" duration="3000" />
+      <workItem from="1765989687200" duration="751000" />
+      <workItem from="1765991685153" duration="354000" />
     </task>
     <task id="LOCAL-00001" summary="Remove obsolete file encodings and update ProjectRootManager configuration">
       <option name="closed" value="true" />
@@ -647,7 +616,31 @@
       <option name="project" value="LOCAL" />
       <updated>1765968442815</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="update: Upgrade GitHub Actions to latest versions and add distribution management for GitHub Packages">
+      <option name="closed" value="true" />
+      <created>1765989788099</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1765989788099</updated>
+    </task>
+    <task id="LOCAL-00040" summary="maven: remove dependencyManagement tag">
+      <option name="closed" value="true" />
+      <created>1765989867323</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1765989867323</updated>
+    </task>
+    <task id="LOCAL-00041" summary="maven: remove dependencyManagement tag">
+      <option name="closed" value="true" />
+      <created>1765989893871</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1765989893871</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +670,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add unit tests for CircuitBreaker to validate action tests" />
     <MESSAGE value="JUnit test cases for supplier methods" />
     <MESSAGE value="add unit tests for CircuitBreaker to validate async execution and timeout scenarios" />
     <MESSAGE value="add unit tests for state class" />
@@ -702,7 +694,8 @@
     <MESSAGE value="add Qodana analysis configuration, GitHub workflow, and migration files for improved code quality and reporting" />
     <MESSAGE value="update: Migrate project to JDK 17, update Maven configuration, and adjust GitHub workflow for compatibility" />
     <MESSAGE value="update: Upgrade GitHub Actions to latest versions and add distribution management for GitHub Packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: Upgrade GitHub Actions to latest versions and add distribution management for GitHub Packages" />
+    <MESSAGE value="maven: remove dependencyManagement tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven: remove dependencyManagement tag" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

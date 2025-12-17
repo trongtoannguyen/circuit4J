@@ -30,12 +30,131 @@ the breaker.
 
 ### Gradle
 
-implementation 'io.github.trongtoannguyen:circuit4J:1.0.0'
+implementation 'io.github.trongtoannguyen:circuit4j:1.0.0'
 
-<!-- ## Quick Start
-## Documentation
+## Usage
 
-[Link to detailed docs] -->
+### Basic Setup
+
+```java
+import example.circuitbreaker.CircuitBreaker;
+import example.circuitbreaker.DefaultCircuitBreaker;
+import java.time.Duration;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+
+// Create an executor service
+ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+
+// Configure circuit breaker parameters
+int maxFailures = 3;                              // Open circuit after 3 failures
+Duration invocationTimeout = Duration.ofSeconds(2); // Timeout for each call
+Duration resetTimeout = Duration.ofSeconds(30);     // Try to close after 30 seconds
+
+// Create circuit breaker instance
+CircuitBreaker circuitBreaker = new DefaultCircuitBreaker(
+    executor,
+    maxFailures,
+    invocationTimeout,
+    resetTimeout
+);
+```
+
+### Executing Actions (void operations)
+
+```java
+// Wrap a void operation
+circuitBreaker.execute(() -> {
+    // Your potentially failing operation
+    externalService.sendNotification();
+});
+```
+
+### Executing Functions (with return values)
+
+```java
+// Wrap a function that returns a value
+String result = circuitBreaker.execute(() -> {
+    return externalService.fetchData();
+});
+```
+
+### Asynchronous Execution
+
+```java
+import java.util.concurrent.CompletableFuture;
+
+// Wrap an async operation
+CompletableFuture<String> future = circuitBreaker.executeAsync(() -> 
+    CompletableFuture.supplyAsync(() -> {
+        return externalService.fetchDataAsync();
+    })
+);
+
+// Handle the result
+future.thenAccept(result -> {
+    System.out.println("Result: " + result);
+}).exceptionally(ex -> {
+    System.err.println("Failed: " + ex.getMessage());
+    return null;
+});
+```
+
+### Adding Event Listeners
+
+Monitor circuit breaker state changes:
+
+```java
+import example.circuitbreaker.CircuitBreakerListener;
+
+CircuitBreakerListener listener = new CircuitBreakerListener() {
+    @Override
+    public void onCircuitClosed(CircuitBreaker breaker) {
+        System.out.println("Circuit closed - normal operation");
+    }
+
+    @Override
+    public void onCircuitOpened(CircuitBreaker breaker) {
+        System.out.println("Circuit opened - blocking requests");
+    }
+
+    @Override
+    public void onCircuitHalfOpened(CircuitBreaker breaker) {
+        System.out.println("Circuit half-open - testing recovery");
+    }
+};
+
+((DefaultCircuitBreaker) circuitBreaker).setEventListener(listener);
+```
+
+### Exception Handling
+
+```java
+import example.circuitbreaker.exceptions.CircuitBreakerOpenException;
+import example.circuitbreaker.exceptions.CircuitBreakerTimeoutException;
+
+try {
+    circuitBreaker.execute(() -> {
+        slowExternalService.call();
+    });
+} catch (CircuitBreakerOpenException e) {
+    // Circuit is open, request blocked
+    System.err.println("Service unavailable, circuit is open");
+} catch (CircuitBreakerTimeoutException e) {
+    // Operation timed out
+    System.err.println("Operation timed out");
+} catch (Exception e) {
+    // Other exceptions from your code
+    System.err.println("Operation failed: " + e.getMessage());
+}
+```
+
+## How It Works
+
+1. **Closed State**: All requests pass through. Failures are counted.
+2. **Open State**: After reaching `maxFailures`, the circuit opens and blocks all requests immediately.
+3. **Half-Open State**: After `resetTimeout`, the circuit allows one test request. If it succeeds, the circuit closes; if it fails, it reopens.
+4. **Timeout Protection**: Any operation exceeding `invocationTimeout` is cancelled and counted as a failure
 
 ## License
 
